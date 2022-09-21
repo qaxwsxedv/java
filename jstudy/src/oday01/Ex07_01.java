@@ -28,8 +28,14 @@ public class Ex07_01 {
 
  */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int num = "*";
+		for(int j = 5 ; j >=0 ; j--) {
+			for(int i = 0 ; i < 5 ; i++) {
+				System.out.print(num +" ");
+			}
+			System.out.println();
+			num++;
+		}
 	}
 
 }
