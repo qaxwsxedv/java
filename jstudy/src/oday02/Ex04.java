@@ -20,7 +20,7 @@ public class Ex04 {
 		//입력 메세지 출력
 		System.out.print("3자리로구성된 숫자를 입력하세요.");
 		// 입력 데이터 변수에 기억시키고
-		int no = sc.nextInt();
+		int no = sc.nextInt(); // NO 123  ???
 		// 다 사용한 자원 반환해주고
 		sc.close();
 		
@@ -29,6 +29,15 @@ public class Ex04 {
 		int namuji = no % 100;
 		int result = no - namuji;
 		
+		
+		/*  
+ 		 * byte, short, int, long  = 정수
+		 * float, double           = 실수 
+		 * boolean => true / false
+		 * char => 문자 'A'  'B' '가'
+		 * 
+		 * String => 문자열 "AB가"
+		 * */		
 		/*
 		// 2.
 		int result = no / 100 * 100;
