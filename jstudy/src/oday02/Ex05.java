@@ -23,6 +23,7 @@ public class Ex05 {
 //			result = "알파벳이 아닙니다."; // 굳이 하지 않아도 되는 코드 <== 내용 변화가 없기 때문에...
 		}
 		
+		System.out.println(ch);
 		System.out.printf("랜덤하게 만든 문자 [ %c ] 는 %s", (char) ch, result);
 	}
 

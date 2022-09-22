@@ -7,7 +7,7 @@ public class Ex13 {
 		그 숫자가 회문수 인지 아닌지를 판별해주는 프로그램을 작성하세요.
 		
 		참고 ]
-			최문수란
+			회문수란
 				앞에서 읽으니 뒤에서 읽으나 같은 수를 회문수라 한다.
 				
 				예 ]
@@ -20,7 +20,11 @@ public class Ex13 {
 				2. 어려운방법 ] 숫자로 처리하는 방법
  */
 	public static void main(String[] args) {
-
+		Scanner sc = new Scanner(System.in);
+		System.out.print("다섯자리의 숫자를 입력하세요.");
+		int no = sc.nextInt();
+		
+		
 	}
 
 }

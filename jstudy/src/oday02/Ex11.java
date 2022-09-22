@@ -9,8 +9,9 @@ public class Ex11 {
 		필요한 게시판 페이지가 몇 페이지 인지를 출력해주는 프로그램을 작성하세요.
  */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int ch = (int)(Math.random()*1000);
+		
+		System.out.print(ch);
 	}
 
 }
