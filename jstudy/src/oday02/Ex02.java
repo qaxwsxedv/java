@@ -19,7 +19,25 @@ public class Ex02 {
 
  */
 	public static void main(String[] args) {
+		// 1 . 쉬운방법
+		/*
+		int num = 1;
 		
+		for(int i = 0 ; i < 5 ; i++) {
+			for(int j = 0 ; j <= i ; j++) {
+				System.out.printf("%3d" , num++);
+			}
+			System.out.println();
+		}
+		*/
+		
+		// 2. 카운터변수로 구하는 방법
+		for(int i = 0 ; i < 5 ; i++) {
+			for(int j = 0 ; j <= i ; j++) {
+				System.out.printf("%3d" , (i * (i + 1) / 2) +1 +j );  //   0 ~ n까지합 ==> n*(n+1)/2
+			}
+			System.out.println();
+		}
 	}
 
 }
