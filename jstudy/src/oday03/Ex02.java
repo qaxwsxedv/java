@@ -12,10 +12,42 @@ package oday03;
 			최대공약수
 				두수의 공통 약수중 최대 숫자.
  */
+import java.util.*;
+
 public class Ex02 {
 
 	public static void main(String[] args) {
-
+		// 입력도구 준비
+		Scanner sc = new Scanner(System.in);
+		
+		// 메세지 출력
+		System.out.print("첫번째 정수 : ");
+		int no1 = sc.nextInt(); // 첫번째 정수 입력받아서 기억...
+		System.out.print("두번째 정수 : ");
+		int no2 = sc.nextInt(); // 두번째 정수 입력받아서 기억...
+		/*
+			no1 작은 수 기억할 변수
+			no2 큰수 기억할 변수
+		 */
+		// 먼저 두수 중 큰수와 작은수를 판별해준다.
+		if(no1 > no2) {
+			int tmp = no1; // 큰수 임시 저장
+			no1 = no2; // 작은수에 no2 기억
+			no2 = tmp; // 큰수에 임시저장된 숫자 기억...
+		}
+		
+		// 작은 수부터 1씩 감소시켜가면서 두수를 나눠서 섬사한다.
+		System.out.println(no1 + " - " + no2);
+		for(int i = no1 ; i > 0 ; i--) {
+			if(no1 % i == 0 && no2 % i == 0) {
+//				System.out.println("입력한 두 수 " + no1 + " 과 " + no2 + " 의 \n 최소공약수는 " + i + "입니다.");
+				String msg = "입력한 두 수 " + no1 + " 과 " + no2 + "의 \n 최소공약수는 " + i + " 입니다. ";
+				JOptionPane.showMessageDialog(null, msg);
+				// 반복문 즉시 종료
+				// <== 최대 공약수 찾아서...
+				break;
+			}
+		}
 	}
 
 }
