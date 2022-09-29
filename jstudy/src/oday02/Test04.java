@@ -9,8 +9,9 @@ public class Test04 {
 		while(true) {
 			System.out.print("정수 : ");
 			int no = sc.nextInt();
-			if(no == -999){
-				System.out.println("### 프로그램을 종료합니다.###");
+			if(no == -999) {
+				System.out.println("### 프로그램을 종료합니다. ###");
+				break;
 			}
 			int result = no / 100 * 100;
 			
@@ -19,7 +20,15 @@ public class Test04 {
 			System.out.println("--------------------------");
 			System.out.println();
 		}
-//		sc.close();
+		sc.close();
+		
+		
+		int no = 10;
+		
 	}
-
+	
+	
+	public boolean between(int no, int a, int b) {
+		return no >= a && no <= b;
+	}
 }

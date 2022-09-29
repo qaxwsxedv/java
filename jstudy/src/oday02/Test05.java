@@ -6,20 +6,22 @@ public class Test05 {
 		char[] student = new char[10];
 		
 		for(int i = 0 ; i < 10 ; i++ ) {
-			student[i] = (char)('A' = i);
+			student[i] = (char)('A' + i);
 		}
 		
 		int[] java = new int[10];
 		int[] db = new int[10];
 		
-		for(int i = 0 ; i < java.length ; i++) {
+		for(int i = 0 ; i < java.length ; i++ ) {
 			java[i] = (int)(Math.random()*41 + 60);
 		}
-		for(int i = 0 ; i < java.length ; i++) {
+		
+		for(int i = 0 ; i < java.length ; i++ ) {
 			db[i] = (int)(Math.random()*41 + 60);
 		}
-		for(int i = 0 ; i < java.length ; i++) {
-			java[i] = (int)(Math.random()*41 + 60);
+		
+		for(int i = 0 ; i < student.length; i++ ) {
+			System.out.printf("%c 학생\n\t자바 : %3d\n\tD  B : %3d\n", student[i], java[i], db[i]);
 		}
 	}
 
