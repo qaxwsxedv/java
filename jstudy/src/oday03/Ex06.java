@@ -15,6 +15,16 @@ package oday03;
 public class Ex06 {
 
 	public static void main(String[] args) {
+		double rYear = 365.2426;
+		int year = (int) rYear;
+		
+		int total = (int)((rYear - rear) * 24 * 60 * 60);
+		
+		int sec = total % 60;
+		
+		total /= 60;
+		
+		
 		
 	}
 

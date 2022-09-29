@@ -12,8 +12,22 @@ package oday03;
 public class Ex04 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int no = (int)(Math.random()*98 + 3);	// (큰수 - 작은수 + 1)+ 작은수
+		
+		// 소수인지 판별
+		int i = 2;
+		// 결과값 변수
+		String result = "소수입니다.";
+		for(; i < no; i++) {
+			if(no % i == 0) {  //10  % 5 = 0
+				// i로 나누어 떨어지는 경우
+				System.out.println(i + "번째 횟수 돌고있음");
+				result = "소수가 아닙니다.";
+				// 반복작업에 의미가 없어졌으므로 즉시 종료시킨다.
+				break;
+			}
+		}
+		System.out.println(no + " 는 " + result);
 	}
 
 }
