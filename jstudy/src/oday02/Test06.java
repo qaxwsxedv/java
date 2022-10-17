@@ -1,8 +1,11 @@
 package oday02;
 
+import java.util.Scanner;
+
 public class Test06 {
 
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		int no = sc.nextInt();
 		int tmp = no;
 		sc.close();
@@ -14,6 +17,6 @@ public class Test06 {
 		}
 		tmp = tmp % num / 10;
 		num /= 100;
+		System.out.println("입력받은 숫자 [" + no + "] 는 " + result);
 	}
-	System.out.println("입력받은 숫자 [" + no + "] 는 " + result);
 }

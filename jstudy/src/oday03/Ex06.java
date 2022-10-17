@@ -18,7 +18,7 @@ public class Ex06 {
 		double rYear = 365.2426;
 		int year = (int) rYear;
 		
-		int total = (int)((rYear - rear) * 24 * 60 * 60);
+		int total = (int)((rYear - year) * 24 * 60 * 60);
 		
 		int sec = total % 60;
 		

@@ -28,7 +28,7 @@ public class Ex07_01 {
 
  */
 	public static void main(String[] args) {
-		int num = "*";
+		int num = '*';
 		for(int j = 5 ; j >=0 ; j--) {
 			for(int i = 0 ; i < 5 ; i++) {
 				System.out.print(num +" ");
