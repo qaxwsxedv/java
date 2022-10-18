@@ -1,5 +1,7 @@
 package day04;
 
+import java.util.Scanner;
+
 public class Ex02 {
 /*
 	문제 2 ]
@@ -14,7 +16,11 @@ public class Ex02 {
 			2 * 반지름 * 3.14
  */
 	public static void main(String[] args) {
-		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("반지름 입력 : ");
+		int aa = sc.nextInt();
+		System.out.printf("원의 넓이 %f\n", aa * aa * 3.14);
+		System.out.printf("원의 둘레 %f", aa * 2 * 3.14);
 	}
 
 }

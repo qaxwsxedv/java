@@ -54,11 +54,6 @@ public class Ex01 {
 		
 		
 		
-		
-		
-		
-		
-		
 		/*
 		 * int pay = 79546; int[] won = { 50000, 10000, 5000, 1000, 500, 100, 50, 10, 1
 		 * };
@@ -73,5 +68,14 @@ public class Ex01 {
 		
 		System.out.println("50000원 : " + oman);
 		System.out.println("10000원 : " + man);
+		System.out.println("5000원 : " + ochun);
+		System.out.println("1000원 : " + chun);
+		System.out.println("500원 : " + obaek);
+		System.out.println("100원 : " + baek);
+		System.out.println("50원 : " + osip);
+		System.out.println("10원 : " + sip);
+		System.out.println("1원 : " + il);
+		 
+		
 	}
 }
