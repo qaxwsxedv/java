@@ -28,9 +28,13 @@ public class Ex02 {
 		// 2. 입력메세지 출력
 		System.out.print("알파벳 문자 하나를 입력하세요 : ");
 		// 3. 입력받아서 변수에 기억
-		String no = sc.nextInt();
+		String no = sc.nextLine();
 		// 입력도구 닫고
 		sc.close();
+		// 4. 결과를 기억할 변수 만들어 놓고
+		String result = "";
+		result = (no >= 'A' && no <= 'Z') ? "대문자 입니다" : "소문자입니다";
+		System.out.print("입력받은 알파벳 [ " + no + " ] 는 " + result);
 		
 	}
 
