@@ -25,9 +25,11 @@ public class Ex01 {
 		int no3 = sc.nextInt();
 		sc.close(); // 사용이 끝난 자원반환...
 		int result = 0;
-		result = (no1 > no2 && no3 > no1) ? no3 : 
-			(no2 > no3 && no1 > no2) ? no1 : 
-				(no2 > no3 && no2 > no1) ? no2 : no3;
+		result = (no1 <= no2 && no2 <= no3) ? no3 : 
+				(no2 <= no3 && no3 <= no1) ? no1 : 
+				(no3 <= no1 && no1 <= no2) ? no2 : 
+				(no1 <= no2 && no2 >= no3) ? no2 :
+				(no2 <= no3 && no3 >= no1) ? no3 : no1;
 		
 		System.out.println(result);
 	}
