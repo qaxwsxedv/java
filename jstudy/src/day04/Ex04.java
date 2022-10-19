@@ -10,7 +10,7 @@ public class Ex04 {
 			0.1 * 24 시간....
  */
 	public static void main(String[] args) {
-		
+		double rYear = 365.2426;
 	}
 
 }

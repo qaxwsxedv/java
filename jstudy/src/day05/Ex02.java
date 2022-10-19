@@ -23,18 +23,28 @@ public class Ex02 {
 			로 꺼내서 사용하면 된다.
  */
 	public static void main(String[] args) {
-		// 1. 입력도구 준비
+		// 입력도구 준비
 		Scanner sc = new Scanner(System.in);
-		// 2. 입력메세지 출력
+		// 입력메세지 출력
 		System.out.print("알파벳 문자 하나를 입력하세요 : ");
-		// 3. 입력받아서 변수에 기억
-		String no = sc.nextLine();
-		// 입력도구 닫고
-		sc.close();
-		// 4. 결과를 기억할 변수 만들어 놓고
-		String result = "";
-		result = (no >= 'A' && no <= 'Z') ? "대문자 입니다" : "소문자입니다";
-		System.out.print("입력받은 알파벳 [ " + no + " ] 는 " + result);
+		// 입력받아서 변수에 기억
+		String str = sc.nextLine();
+		// 문자열에서 문자 추출
+		char ch = str.charAt(0); // 입력된 문자열의 첫번째 문자 추출...
+		
+		// 판별하고 처리하고
+		char result = (ch < 'a') ?
+					// 대문자를 입력한 경우
+					// 대문자를 소문자로 변환해주면 된다.
+					(char)(ch + ('a' - 'A')) // int 의 결과가 발생하는데 이것을 문자타입으로 강제 형변환 해준다.
+				:
+					// 소문자를 입력한 경우
+					(char)(ch - ('a' - 'A'))
+		;
+		
+		// 결과 출력하고
+		System.out.println("입력받은 알파벳은 [ " + ch + " ] 이고 변환하면 [ " + result + " ] 입니다.");
+				
 		
 	}
 
