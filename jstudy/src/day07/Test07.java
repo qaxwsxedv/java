@@ -5,7 +5,7 @@ public class Test07 {
 	public static void main(String[] args) {
 		//Myinfo jennie = new MyInfo();
 		
-		Myinfo jennie = new Myinfo();
+		MyInfo jennie = new MyInfo();
 		jennie.name = "jennie";
 		jennie.height = 165.5;
 		jennie.gen = 'F';
@@ -14,7 +14,7 @@ public class Test07 {
 		System.out.println("height : " + jennie.height);
 		System.out.println("gen : " + jennie.gen);
 		
-		Myinfo euns = new Myinfo();
+		MyInfo euns = new MyInfo();
 		euns.name = "전은석";
 		System.out.println("name : " + euns.name);
 	}

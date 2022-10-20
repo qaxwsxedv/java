@@ -1,6 +1,6 @@
 package day07;
 
-public class Myinfo {
+public class MyInfo {
 /*
 	이름, 나이, 생일, 전화번호, 이메일,
 	결혼여부, 성별, 키
