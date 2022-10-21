@@ -18,7 +18,10 @@ public class Extra {
 		스트레스가 많은 문제이니 심약한 사람은 피하시기 바랍니다.
  */
 	public static void main(String[] args) {
-		
+		int score = (int)(Math.random() * 101);
+		char grade = (score < 60) ? 'F' : (
+					(score < 70)
+				);
 	}
 
 }
