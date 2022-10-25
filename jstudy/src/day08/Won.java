@@ -1,8 +1,8 @@
 package day08;
 
 public class Won {
-	int rad;
-	double arround, area;
+	public int rad;
+	public double arround, area;
 	
 	// 둘레 셋팅함수
 	public void setArround() {

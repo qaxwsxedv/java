@@ -1,8 +1,8 @@
 package day08;
 
 public class Nemo {
-	int width, height;
-	double area;
+	public int width, height;
+	public double area;
 	public void setArea() {
 		area = width * height;
 	}
