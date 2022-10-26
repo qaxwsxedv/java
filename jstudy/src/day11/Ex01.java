@@ -19,7 +19,7 @@ public class Ex01 {
 		
 		// 10 칸을 채울 도형을 결정할 숫자 만들기
 		int no = (int)(Math.random()*(2 - 0 + 1));
-		
+		/*
 		// 10개의 칸에 도형을 채우고
 		switch(no) {
 		case 0:
@@ -65,8 +65,8 @@ public class Ex01 {
 				break;
 			}
 		}
+		*/
 		
-		/*
 		// 방법 1 ]
 		for(int i = 0 ; i < 10; i++ ) {
 			switch(no) {
@@ -96,7 +96,7 @@ public class Ex01 {
 				break;
 			}
 		}
-		*/
+		
 		
 		// 출력한다.
 		for(Figure f : fig) {
