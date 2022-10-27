@@ -1,13 +1,13 @@
 package day12;
 
-public class Ex01_02 {
+public class Ex00_02 {
 	/*
 
 	1.
 	 int[][] arr; 배열을 만들고
 	 반복문을 이용해서 아래 처럼 숫자를 채워넣고
 	 꺼내서 출력하세요.
-
+	 
 		1	2	3	4	5
 		6	7	8	9	10
 		11	12	13	14	15
@@ -26,15 +26,16 @@ public class Ex01_02 {
 		4	9	14	19	24
 		5	10	15	20	25
 		
-		
 		3. 2 이상의 숫자중에서 소수를 10개 찾아서 배열에 담고 출력하세요.
 	*/	
-	public Ex01_02() {
+		
+	public Ex00_02() {
 		int[][] arr = new int[5][5];
 		for(int i = 0 ; i < 5 ; i++) {
 			for(int j = 0 ; j < 5 ; j++) {
-				int no = 5 * i + j + 1;
+				int no = i * 5 + j + 1;
 				arr[i][j] = no;
+				
 			}
 		}
 		for(int i = 0 ; i < 5 ; i++) {
@@ -45,22 +46,24 @@ public class Ex01_02 {
 			System.out.println();
 		}
 		int[][] nums = new int[5][5];
-		for(int i = 0 ; i <5 ; i++) {
-			for(int j = 0 ; j < 5 ;j++) {
-				int no = i + j * 5 + 1 ;
+		for(int i = 0; i < 5; i++) {
+			for(int j=0; j<5; j++) {
+				int no = i + j * 5 + 1;
 				nums[i][j] = no;
 			}
 		}
-		for(int i = 0 ; i <5; i++) {
-			for(int j = 0 ; j <5 ; j++) {
+		for(int i = 0 ; i < 5 ; i++) {
+			for(int j = 0 ; j < 5 ; j++) {
 				int no = nums[i][j];
 				System.out.print(no + ", ");
 			}
 			System.out.println();
 		}
 	}
+
 	public static void main(String[] args) {
-		new Ex01_02();
+		new Ex00_02();
+
 	}
 
 }
