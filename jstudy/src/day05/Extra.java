@@ -20,7 +20,7 @@ public class Extra {
 	public static void main(String[] args) {
 		int score = (int)(Math.random() * 101);
 		char grade = (score < 60) ? 'F' : (
-					(score < 70)
+					(score < 70) ? 'D' : 'C'
 				);
 	}
 

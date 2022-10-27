@@ -19,7 +19,7 @@ public class Ex01 {
 		
 		// 10 칸을 채울 도형을 결정할 숫자 만들기
 		int no = (int)(Math.random()*(2 - 0 + 1));
-		/*
+		
 		// 10개의 칸에 도형을 채우고
 		switch(no) {
 		case 0:
@@ -65,8 +65,8 @@ public class Ex01 {
 				break;
 			}
 		}
-		*/
 		
+		/*
 		// 방법 1 ]
 		for(int i = 0 ; i < 10; i++ ) {
 			switch(no) {
@@ -94,6 +94,55 @@ public class Ex01 {
 				n.setArea(); // 면적
 				fig[i] = n;
 				break;
+			}
+		}
+		*/
+		
+		// 정렬하기( 면적기준 오름차순 정렬 )
+		for(int i = 0 ; i < fig.length - 1 ; i++ ) {
+			Figure f1 = fig[i];
+			double area1 = 0;
+			switch(no) {
+			case 0:
+				Won w = (Won) f1;
+				area1 = w.area;
+				break;
+			case 1:
+				Semo s = (Semo) f1;
+				area1 = s.area;
+				break;
+			case 2:
+				Nemo n = (Nemo) f1;
+				area1 = n.area;
+				break;
+			}
+			
+			for(int j = i+1 ; j < fig.length ; j++ ) {
+				Figure f2 = fig[j];
+				double area2 = 0;
+				switch(no) {
+				case 0:
+					Won w = (Won) f2;
+					area2 = w.area;
+					break;
+				case 1:
+					Semo s = (Semo) f2;
+					area2 = s.area;
+					break;
+				case 2:
+					Nemo n = (Nemo) f2;
+					area2 = n.area;
+					break;
+				}
+				
+				// 비교
+				if(area1 > area2) {
+					Figure tmp = fig[i];
+					fig[i] = fig[j];
+					fig[j] = tmp;
+					area1 = area2;
+				}
+				
 			}
 		}
 		

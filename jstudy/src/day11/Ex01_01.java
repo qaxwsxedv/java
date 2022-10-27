@@ -47,7 +47,7 @@ public class Ex01_01 {
 				n.width = (int)(Math.random()*16+ 5);
 				n.height = (int)(Math.random()*16+5);
 				n.setArea();
-				break
+				break;
 			}
 		}
 		/*
