@@ -23,20 +23,17 @@ public class Ex01 {
 			
 			switch(doh) {
 			case 0:
-	//			Dongle = getDongle();
 				int rad = (int)(Math.random()*16 + 5);
 				Dohyung d = new Dongle(rad);
 				arr[i] = d;
 				break;
 			case 1:
-	//			Semo = getSemo();
 				int width = (int)(Math.random()*16 + 5);
 				int height = (int)(Math.random()*16 + 5);
 				Dohyung s = new Semo(width, height);
 				arr[i] = s;
 				break;
 			case 2:
-	//			Nemo = getNemo();
 				int no1 = (int)(Math.random()*16 + 5);
 				int no2 = (int)(Math.random()*16 + 5);
 				Dohyung n = new Nemo(no1, no2);
