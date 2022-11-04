@@ -12,9 +12,9 @@ public class Circle implements Figure {
 
 	@Override
 	public void toPrint() {
-		System.out.printf("원 - 반지름 : %2d, 둘 레 : %7.2f, 면 적 : %7.2f\n",
+		System.out.printf("%-6s - 반지름 : %2d, 둘  레 : %7.2f, 면  적 : %7.2f\n",
 				"원", rad, arround, area
-				);
+		);
 
 	}
 	public int getRad() {

@@ -38,16 +38,16 @@ public class MemberSQL {
 			buff.append("WHERE ");
 			buff.append("	is = ? ");
 		break;
-		case SEL_ID_INFO:
-			SELECT
-				mno, id, name, mail, tel, birth,
-				DECODE(gen, 'F', '여자',
-							'M', '남자') gen
-				, avt, joindate
-			FROM
-				member
-			WHERE
-				id = ?
+//		case SEL_ID_INFO:
+//			SELECT
+//				mno, id, name, mail, tel, birth,
+//				DECODE(gen, 'F', '여자',
+//							'M', '남자') gen
+//				, avt, joindate
+//			FROM
+//				member
+//			WHERE
+//				id = ?
 		}
 		return buff.toString();
 	}

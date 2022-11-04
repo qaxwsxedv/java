@@ -1,9 +1,15 @@
- package class15B.controller.member;
+package class15B.controller.member;
 
-public class Login {
+import class15B.controller.HttpServletRequest;
+import class15B.controller.HttpServletResponse;
+import class15B.controller.MainController;
 
-	public Login() {
-		// TODO Auto-generated constructor stub
+public class Login implements MainController {
+
+	@Override
+	public String exec(/* HttpServletRequest req, HttpServletResponse resp */) {
+		
+		return null;
 	}
 
 }

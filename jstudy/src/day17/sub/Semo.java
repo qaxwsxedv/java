@@ -12,9 +12,9 @@ public class Semo implements Figure {
 
 	@Override
 	public void toPrint() {
-		System.out.printf("%6.s - 가 로 : %2d, 세 로 : %7d, 면 적 : %7.2f\n",
-				width, height, area
-				);
+		System.out.printf("%-4s - 밑  변 : %2d, 높  이 : %7d, 면  적 : %7.2f\n",
+				"삼각형", width, height, area
+		);
 
 	}
 	public int getWidth() {

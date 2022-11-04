@@ -9,11 +9,33 @@ public class Sagak extends Nemo {
 		this.height = height;
 		setArea();
 	}
-	
-
-	public Sagak(int garo, int sero) {
-		super(garo, sero);
-		
+	@Override
+	public void setArea() {
+		area = width * height;
 	}
-
+	@Override
+	public void toPrint() {
+		System.out.printf(
+				"사각형\n\t가  로 : %2d\n\t세  로 : %2d\n\t넓  이 : %5.2f\n\n",
+				width, height, area
+		);
+	}
+	public int getWidth() {
+		return width;
+	}
+	public void setWidth(int width) {
+		this.width = width;
+	}
+	public int getHeight() {
+		return height;
+	}
+	public void setHeight(int height) {
+		this.height = height;
+	}
+	public double getArea() {
+		return area;
+	}
+	public void setArea(double area) {
+		this.area = area;
+	}
 }

@@ -23,9 +23,9 @@ public class MemberController {
 	public void printIdInfo() {
 		
 	}
+	
 	public static void main(String[] args) {
 		new MemberController();
-
 	}
 
 }
