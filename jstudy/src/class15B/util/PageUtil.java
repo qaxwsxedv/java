@@ -1,4 +1,4 @@
-package day14;
+package class15B.util;
 
 public class PageUtil {
 	private int nowPage;	// 현재 페이지 번호
