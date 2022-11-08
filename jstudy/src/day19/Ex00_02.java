@@ -2,7 +2,7 @@ package day19;
 
 import java.util.*;
 
-public class Ex00_01 {
+public class Ex00_02 {
 /*
 	1.
 		blackpink 멤버들의 
@@ -26,7 +26,7 @@ public class Ex00_01 {
 	결과도 출력하세요.
 		
  */
-	public Ex00_01() {
+	public Ex00_02() {
 		ArrayList names = new ArrayList();
 		names.add("제니");
 		names.add("리사");
@@ -38,13 +38,11 @@ public class Ex00_01 {
 			System.out.print(name + " | ");
 		}
 		System.out.println();
-		
 		ArrayList ids = new ArrayList();
 		ids.add("jennie");
-		ids.add("lisa");
+		ids.add("risa");
 		ids.add("rose");
 		ids.add("jisoo");
-		
 		for(Object o : ids) {
 			String id = (String) o;
 			System.out.print(id + " | ");
@@ -52,77 +50,48 @@ public class Ex00_01 {
 		System.out.println();
 		
 		ArrayList mails = new ArrayList();
-		for(int i = 0 ; i < ids.size(); i++) {
-			String mail = ((String)ids.get(i)) + "@githrd.com";
+		for(int i = 0 ; i < ids.size(); i ++) {
+			String mail =((String) ids.get(i)) + "@githrd.com";
 			mails.add(mail);
 		}
-		
 		for(Object o : mails) {
 			String mail = (String) o;
 			System.out.print(mail + " | ");
 		}
 		System.out.println();
-		
 		ArrayList blackPink = new ArrayList();
-		
 		ArrayList tmp = new ArrayList();
 		tmp.add(names);
 		tmp.add(ids);
 		tmp.add(mails);
-		
 		for(int i = 0 ; i < 4 ; i++) {
 			ArrayList l = new ArrayList();
-			
 			l.add(names.get(i));
 			l.add(ids.get(i));
 			l.add(mails.get(i));
-			
 			blackPink.add(l);
 		}
 		for(Object o : blackPink) {
 			ArrayList l = (ArrayList) o;
 			for(Object obj : l) {
-				String s = (String)obj;
+				String s = (String) obj;
 				System.out.print(s + " | ");
 			}
 			System.out.println();
-		}
-		ArrayList jennie = (ArrayList) blackPink.get(0);
-		ArrayList lisa = (ArrayList) blackPink.get(1);
-		ArrayList rose = (ArrayList) blackPink.get(2);
-		ArrayList jisoo = (ArrayList) blackPink.get(3);
-		System.out.println("----------------------------");
-		for(Object o : jennie) {
-			System.out.print((String)o + " | ");
-		}
-		System.out.println();
-		System.out.println("++++++++++++++++++++++");
-		
-		ArrayList blackpink = new ArrayList();
-		for(int i = 0; i < blackPink.size(); i++) {
-			String name = (String)((ArrayList)blackPink.get(i)).get(0);
-			String id = (String)((ArrayList)blackPink.get(i)).get(1);
-			String mail = (String)((ArrayList)blackPink.get(i)).get(2);
-			
-			BlackPink vo = new BlackPink();
-			vo.setName(name);
-			vo.setId(id);
-			vo.setMail(mail);
-			blackpink.add(vo);
-		}
-		for(int i = 0 ; i < blackpink.size(); i++) {
-			Object o = blackpink.get(i);
-			BlackPink vo = (BlackPink) o;
-			String name = vo.getName();
-			String id = vo.getId();
-			String mail = vo.getMail();
-			
-			System.out.printf("%-6s - %-8s - %-20s\n", name, id, mail);
+			ArrayList jennie = (ArrayList) blackPink.get(0);
+			ArrayList lisa = (ArrayList) blackPink.get(1);
+			ArrayList rose = (ArrayList) blackPink.get(2);
+			ArrayList jisoo = (ArrayList) blackPink.get(3);
+			System.out.println("++++++++++");
+			for(Object o : jennie) {
+				System.out.print((String)o + " | ");
+			}
+			System.out.println();
 		}
 	}
 
 	public static void main(String[] args) {
-		new Ex00_01();
+		new Ex00_02();
 
 	}
 

@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 
 public class EmpVO {
 	private int mno, mgrdno, sal, comm, grade;
-	private String name, job, sname, dname, loc, sdate;
+	private String name, job, mail, sname, dname, loc, sdate;
 	private Date hdate;
 	private Time htime;
 	public int getMno() {
@@ -51,6 +51,12 @@ public class EmpVO {
 	}
 	public void setJob(String job) {
 		this.job = job;
+	}
+	public String getMail() {
+		return mail;
+	}
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 	public String getSname() {
 		return sname;
