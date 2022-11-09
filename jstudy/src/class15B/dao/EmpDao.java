@@ -3,6 +3,7 @@ package class15B.dao;
 import java.sql.*;
 import db.*;
 import class15B.sql.*;
+import class15B.util.PageUtil;
 import class15B.vo.*;
 
 import java.util.*;
@@ -299,5 +300,82 @@ public class EmpDao {
 		}
 		// 6.결과 반환해주고
 		return cnt;
+	}
+	
+	// 총 사원수 조회 전담 처리함수
+	public int getTotal() {
+		// 할일
+		// 1. 반환값 변수
+		int cnt = 0;
+		// 2. 커넥션 꺼내오고
+		con = db.getCon("scott", "tiger");
+		// 3. 질의명령 가져오고
+		String sql = eSQL.getSQL(eSQL.SEL_TOTAL);
+		// 4. 명령전달도구 준비하고
+		stmt = db.getStmt(con);
+		try {
+			// 5. 질의명령 전달하고 결과 받고
+			rs = stmt.executeQuery(sql);
+			// 6. 데이터 꺼내고
+			rs.next();
+			cnt = rs.getInt("cnt");
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.close(rs);
+			db.close(stmt);
+			db.close(con);
+		}
+		// 7. 반환해주고
+		return cnt;
+	}
+	
+	// 사원리스트 조회 전담 처리함수
+	public ArrayList<EmpVO> getEmpList(PageUtil page){
+		// 작업순서
+		// 1. 반환값 변수
+		ArrayList<EmpVO> list = new ArrayList<EmpVO>();
+		// 2. 커넥션 꺼내오고
+		con = db.getCon("scott", "tiger");
+		// 3. 질의명령 가져오고
+		String sql = eSQL.getSQL(eSQL.SEL_EMP_LIST);
+		// 4. 명령 전달 도구 준비하고
+		pstmt = db.getPstmt(con, sql);
+		try {
+			// 5. 질의명령 완성하고
+			pstmt.setInt(1, page.getStartRno());
+			pstmt.setInt(2, page.getEndRno());
+			// 6. 질의명령 보내고 결과받고
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				// 7. 꺼내서 VO 에 담고
+				// 반복해서 VO  만들고 채워줘야 한다.
+				EmpVO eVO = new EmpVO();
+				// 데이터 꺼내기
+//				int rno = rs.getInt("rno");
+				int mno = rs.getInt("mno");
+				int dno = rs.getInt("dno");
+				String name = rs.getString("name");
+				Date hdate = rs.getDate("hdate");
+				
+				// VO에 채우고
+				eVO.setMno(mno);
+				eVO.setDno(dno);
+				eVO.setName(name);
+				eVO.setHdate(hdate);
+				eVO.setSdate();
+				
+				// 8. List에 VO 담고
+				list.add(eVO);
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.close(rs);
+			db.close(pstmt);
+			db.close(con);
+		}
+		// 9. 리스트 반환해주고
+		return list;
 	}
 }

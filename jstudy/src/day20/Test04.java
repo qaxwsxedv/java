@@ -1,6 +1,7 @@
 package day20;
 
 import java.util.*;
+
 public class Test04 {
 /*
 	랜덤하게 학생 성적을 10개 발생시켜서 기억시키고
@@ -24,25 +25,23 @@ public class Test04 {
 		TreeSet lowSet = (TreeSet) set.headSet(60);
 		
 		itor = lowSet.iterator();
-		System.out.println("#####60점 미만####");
+		System.out.println("####### 60점 미만 #######");
 		while(itor.hasNext()) {
 			System.out.print(itor.next() + " | ");
 		}
 		System.out.println();
 		
-		TreeSet upSet = (TreeSet) set.headSet(60);
+		TreeSet upSet = (TreeSet) set.tailSet(60);
 		itor = upSet.iterator();
-		System.out.println("#####60점 이상####");
+		System.out.println("####### 60점 이상 #######");
 		while(itor.hasNext()) {
 			System.out.print(itor.next() + " | ");
 		}
 		System.out.println();
-		
 	}
 
 	public static void main(String[] args) {
 		new Test04();
-
 	}
 
 }

@@ -6,10 +6,17 @@ import java.text.SimpleDateFormat;
 
 
 public class EmpVO {
-	private int mno, mgrdno, sal, comm, grade;
+	private int mno, mgrdno, sal, comm, grade, dno;
 	private String name, job, mail, sname, dname, loc, sdate;
 	private Date hdate;
 	private Time htime;
+
+	public int getDno() {
+		return dno;
+	}
+	public void setDno(int dno) {
+		this.dno = dno;
+	}
 	public int getMno() {
 		return mno;
 	}
