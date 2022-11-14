@@ -241,4 +241,5 @@
 		controller
 		dao
 		sql
+		vo
 	
